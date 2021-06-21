@@ -263,6 +263,7 @@ body {
 
     &__title {
         @include block-title;
+        @include adaptive-font(18, 13);
         padding: 115px 0 30px 0;
 
         img {
@@ -338,6 +339,8 @@ body {
 /* 3. Bicycle gallery */
 
 .models {
+
+    /* Row 1 */
 
     &__row {
         display: flex;
@@ -424,7 +427,7 @@ body {
         @include adaptive-font(16, 13);
         padding: 15px 0 0 0;
         line-height: 30px;
-        text-align: left;
+        text-align: justify;
 
         .strip {
             margin: 30px auto 0;
@@ -433,8 +436,6 @@ body {
             background-color: #d7d7d7;
         }
     }
-
-    /* Row 1 */
 
     @media (min-width: 1200px) and (max-width: 1366px) {
 
@@ -465,10 +466,6 @@ body {
                 display: block;
             }
 
-            &__column-small {
-                
-            }
-
             &__column {
 
                 &-item {
@@ -477,12 +474,37 @@ body {
 
                         .wrapper {
                             position: static;
+                            transform: none;
+                            padding: 0 40px;
                         }
                     }
                 }
             }
 
+            &__title {
+
+                img {
+                    padding: 30px 0 20px 0;
+                }
+            }
+
+            &__text {
+                
+                .strip {
+                    margin: 20px auto 30px;
+                }
+            }
         }
+    }
+
+    /* Row 2 */
+
+    &__column-first {
+        order: 1;
+    }
+
+    &__column-second {
+        order: 2;
     }
 
 }
