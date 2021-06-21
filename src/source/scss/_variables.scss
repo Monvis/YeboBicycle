@@ -3,3 +3,17 @@
     $maxWidth: $maxWidth - 320;
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
+
+@mixin block-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+@mixin block-text {
+    font-size: 18px;
+    line-height: 34px;
+    color: #848789;
+    text-align: center;
+}

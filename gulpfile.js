@@ -93,7 +93,7 @@ function css(params) {
         group_media()
     )
     .pipe(
-        autoprefixer({overrideBrowserslist: ['last 5 versions'], cascade: true})
+        autoprefixer({grid: true, overrideBrowserslist: ['last 5 versions'], cascade: true})
     )
     .pipe(dest(path.build.css))
     .pipe(

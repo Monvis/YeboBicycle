@@ -5,6 +5,8 @@
 
 /* -------------------------------------------------------------------- */
 /* 1. Header */
+/* 2. Intro */
+/* 3. Bicycle gallery */
 /* -------------------------------------------------------------------- */
 
 /* === Common === */
@@ -30,6 +32,7 @@ body {
     height: 100vh;
     background: url(../../img/header_bg.jpg) no-repeat;
     background-position-x: center;
+    background-size: cover;
 
     .container {
 
@@ -43,6 +46,7 @@ body {
     
             &__links {
                 @include adaptive-font(13, 9);
+                transition: .4s;
                 font-weight: bold;
                 text-transform: uppercase;
                 text-decoration: none;
@@ -50,11 +54,13 @@ body {
                 color: #4d4959;
     
                 &:hover {
-                    border-bottom: 1px solid #4d4959;
+                    color: #64c29e;
                 }
             }
 
             img {
+                position: relative;
+                z-index: 11;
                 max-width: 100%;
             }
 
@@ -64,8 +70,8 @@ body {
                 &__btn {
                     position: relative;
                     display: block;
-                    width: 40px;
-                    height: 30px;
+                    width: 50px;
+                    height: 50px;
                 }
 
                 &__icon {
@@ -73,7 +79,7 @@ body {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 20px;
+                    width: 25px;
                     height: 2px;
                     z-index: 11;
                     background-color: #4d4959;
@@ -83,7 +89,7 @@ body {
                         content: '';
                         position: absolute;
                         transition: .3s;
-                        width: 30px;
+                        width: 35px;
                         height: 2px;
                         background-color: #4d4959;
                     }
@@ -98,6 +104,7 @@ body {
                 }
 
                 &__active {
+                    color: #fff;
 
                     .burger__window {
                         right: 0;
@@ -105,17 +112,20 @@ body {
 
                     span {
                         width: 30px;
+                        background-color: #fff;
     
                         &::before {
                             width: 13px;
                             transform: rotate(-45deg);
                             transform-origin: left bottom;
+                            background-color: #fff;
                         }
     
                         &::after {
                             width: 13px;
                             transform: rotate(45deg);
                             transform-origin: left top;
+                            background-color: #fff;
                         }
                     }
                 }
@@ -128,7 +138,7 @@ body {
                     right: -100%;
                     width: 100%;
                     height: 100%;
-                    background-color: #fff;
+                    background-color: #4d4959;
                     z-index: 10;
 
                     &-links {
@@ -137,31 +147,23 @@ body {
                         text-align: center;
                         flex-direction: column;
                         justify-content: flex-start;
+                        color: #fff;
 
                         a {
                             padding: 20px 0 20px 0;
                             text-decoration: none;
                             text-transform: uppercase;
-                            color: #4d4959;
+                            color: #fff;
                         }
 
-                        .strip {
+                        .point {
                             margin: 0 auto;
-                            width: 90%;
-                            height: 1px;
-                            background-color: #b7b7b7b7;
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 50%;
+                            background-color: #fff;
                         }
-                    }
 
-                    &-networks {
-                        width: 170px;
-                        margin: 100px auto 0;
-
-                        img {
-                            margin: 0 20px 0 0;
-                            width: 29px;
-                            height: 28px;
-                        }
                     }
                 }
             }
@@ -212,7 +214,7 @@ body {
 
             .nav {
 
-                &__links, .point {
+                &__links, .point__main {
                     display: none;
                 }
                 
@@ -237,7 +239,7 @@ body {
 
             .nav {
 
-                &__links, .point {
+                &__links, .point__main {
                     display: none;
                 }
                 
@@ -254,3 +256,233 @@ body {
     }
 }
 
+/* 2. Intro */
+
+.intro {
+    background-color: #f7f7f7;
+
+    &__title {
+        @include block-title;
+        padding: 115px 0 30px 0;
+
+        img {
+            padding: 0 0 30px 0;
+        }
+    }
+
+    &__text {
+        @include block-text;
+        @include adaptive-font(18, 15);
+        padding: 0 0 140px 0;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1115px) {
+
+    .intro {
+    
+        &__title {
+            padding: 90px 0 30px 0;
+        }
+    
+        &__text {
+            padding: 0 0 90px 0;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .intro {
+    
+        &__title {
+            padding: 90px 0 30px 0;
+        }
+    
+        &__text {
+            padding: 0 0 90px 0;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .intro {
+    
+        &__title {
+            padding: 90px 0 30px 0;
+        }
+    
+        &__text {
+            padding: 0 0 90px 0;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+
+    .intro {
+    
+        &__title {
+            padding: 90px 0 30px 0;
+            line-height: 25px;
+        }
+    
+        &__text {
+            padding: 0 0 90px 0;
+        }
+    }
+}
+
+/* 3. Bicycle gallery */
+
+.models {
+
+    &__row {
+        display: flex;
+    }
+
+    &__column {
+
+        &-item {
+            position: relative;
+
+            &-hover {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: .4s;
+            }
+
+            &:hover .models__column-item-hover {
+                opacity: 1;
+            }
+
+            .shop {
+                width: 100%;
+                height: auto;
+            }
+
+            &-card {
+                position: relative;
+                flex: 0 1 66.67%;
+
+                .wrapper {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    padding: 0 10%;
+                }
+            }
+        }
+
+        .present {
+            position: relative;
+            flex: 0 1 33.33%;
+
+            .triangle-down {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+
+                width: 0;
+	            height: 0;
+	            border-left: 10px solid transparent;
+	            border-right: 10px solid transparent;
+	            border-top: 10px solid #fff;
+            }
+        }
+
+        &-big {
+            flex: 0 1 66.67%;
+            cursor: pointer;
+        }
+
+        &-small {
+            display: flex;
+            flex: 0 1 33.33%;
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        @include block-title;
+        @include adaptive-font(18, 13);
+
+        img {
+            padding: 0 0 30px 0;
+        }
+    }
+
+    &__text {
+        @include block-text;
+        @include adaptive-font(16, 13);
+        padding: 15px 0 0 0;
+        line-height: 30px;
+        text-align: left;
+
+        .strip {
+            margin: 30px auto 0;
+            width: 50px;
+            height: 1px;
+            background-color: #d7d7d7;
+        }
+    }
+
+    /* Row 1 */
+
+    @media (min-width: 1200px) and (max-width: 1366px) {
+
+        .models {
+
+            &__title {
+    
+                img {
+                    padding: 0 0 20px 0;
+                }
+            }
+    
+            &__text {
+                line-height: 25px;
+    
+                .strip {
+                    margin: 20px auto 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+
+        .models {
+            
+            &__row {
+                display: block;
+            }
+
+            &__column-small {
+                
+            }
+
+            &__column {
+
+                &-item {
+
+                    &-card {
+
+                        .wrapper {
+                            position: static;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}

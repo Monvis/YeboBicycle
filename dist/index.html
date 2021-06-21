@@ -16,11 +16,11 @@
 		<div class="container">
 			<nav class="nav">
 				<a class="nav__links" href="#">about us</a>
-				<div class="point">.</div>
+				<div class="point point__main">.</div>
 				<a class="nav__links" href="#">work</a>
 				<img src="img/logo.png" alt="">
-				<a class="nav__links" href="#">shop</a>
-				<div class="point">.</div>
+				<a class="nav__links none" href="#">shop</a>
+				<div class="point point__main">.</div>
 				<a class="nav__links" href="#">contact</a>
 
 				<div class="burger">
@@ -31,24 +31,72 @@
 					<div class="burger__window">
 						<div class="burger__window-links">
 							<a href="#">about us</a>
-							<div class="strip"></div>
+							<div class="point"></div>
 							<a href="#">work</a>
-							<div class="strip"></div>
+							<div class="point"></div>
 							<a href="#">shop</a>
-							<div class="strip"></div>
+							<div class="point"></div>
 							<a href="#">contact</a>
-
-							<div class="burger__window-networks">
-								<img src="img/twitter.png" alt="">
-								<img src="img/facebook.png" alt="">
-								<img src="img/pinterest.png" alt="">
-							</div>
 						</div>
-					</div>
-				</div>
+					</div> <!-- /.burger__window -->
+				</div> <!-- /.burger -->
 			</nav>
 		</div>
 	</header>
+
+	<main class="main">
+
+		<!-- Intro -->
+		<div class="intro">
+			<div class="container">
+				<div class="card">
+					<div class="intro__title">
+						<img src="img/chain_icon.png" alt="">
+						<h1>A NEW GENERATION OF VINTAGE BIKE</h1>
+					</div>
+					<div class="intro__text">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+					</div>
+				</div>
+			</div> 
+		</div> <!-- /.intro -->
+
+		<!-- Bicycle gallery -->
+
+		<div class="models">
+			<div class="models__row">
+				<div class="models__column models__column-big">
+					<div class="models__column-item">
+						<img class="shop" src="img/red_bicycle_present.jpg" alt="">
+						<div class="models__column-item-hover">
+							<img src="img/bicycle-hover.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="models__column models__column-small">
+					<div class="models__column-item models__column-item-card">
+						<div class="wrapper">
+							<div class="models__title">
+								<img src="img/red_bicycle_present-icon.png" alt="">
+								<h2>vintage Oliva</h2>
+							</div>
+							<div class="models__text">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
+								<div class="strip"></div>
+							</div>
+						</div>
+					</div>
+					<div class="models__column-item present">
+						<div class="triangle-down"></div>
+						<img class="shop" src="img/red_bicycle_present_minimal.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="models__row"></div>
+			<div class="models__row"></div>
+		</div>
+
+	</main>
 
 	<script src='source/js/script.js'></script>
 </body>
