@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Null */
 
 * {
@@ -97,6 +99,8 @@ h6 {
 /* 2. Intro */
 
 /* 3. Bicycle gallery */
+
+/* 4. Swiper */
 
 /* -------------------------------------------------------------------- */
 
@@ -456,6 +460,48 @@ body {
           order: 2;
 }
 
+/* 3. Swiper */
+
+.slider-container {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 0 0 65px 0;
+}
+
+.slider-container .swiper-container {
+  width: 80%;
+  min-height: 200px;
+  max-height: 400px;
+  /* Цвет активной иконки слайдера */
+}
+
+.slider-container .swiper-container .swiper-wrapper .swiper-slide-item-title {
+  font-weight: bold;
+  font-size: calc(15px + 3 * ((100vw - 320px) / 1280));
+  letter-spacing: 2px;
+}
+
+.slider-container .swiper-container .swiper-wrapper .swiper-slide-item-title img {
+  padding: 120px 0 30px 0;
+}
+
+.slider-container .swiper-container .swiper-wrapper .swiper-slide-item-title span {
+  font-weight: normal;
+  color: #848789;
+}
+
+.slider-container .swiper-container .swiper-wrapper .swiper-slide-item-text {
+  padding: 30px 15px 100px;
+  font-style: italic;
+  font-size: 24px;
+  color: #848789;
+  line-height: 34px;
+}
+
+.slider-container .swiper-container .swiper-pagination-bullet-active {
+  background-color: #848789;
+}
+
 @media (max-width: 1199px) {
   .models .models__row {
     display: block;
@@ -568,5 +614,35 @@ body {
 
   .models .models__text .strip {
     margin: 20px auto 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 626px) {
+  .slider-container {
+    padding: 0 0 60px;
+  }
+
+  .slider-container .swiper-container .swiper-wrapper .swiper-slide-item-title img {
+    padding: 60px 0 30px 0;
+  }
+
+  .slider-container .swiper-container .swiper-wrapper .swiper-slide-item-text {
+    font-size: calc(17px + 3 * ((100vw - 320px) / 1280));
+    line-height: 24px;
+    text-align: justify;
+    padding: 30px 15px 70px;
+  }
+}
+
+@media (min-width: 626px) and (max-width: 684px) {
+  .slider-container .swiper-container .swiper-wrapper .swiper-slide-item-title img {
+    padding: 60px 0 30px 0;
+  }
+
+  .slider-container .swiper-container .swiper-wrapper .swiper-slide-item-text {
+    font-size: calc(18px + 1 * ((100vw - 320px) / 1280));
+    line-height: 24px;
+    text-align: center;
+    padding: 30px 15px 70px;
   }
 }
