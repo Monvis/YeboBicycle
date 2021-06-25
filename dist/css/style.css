@@ -104,6 +104,8 @@ h6 {
 
 /* 5. Shop */
 
+/* 6. Form */
+
 /* -------------------------------------------------------------------- */
 
 /* === Common === */
@@ -638,6 +640,56 @@ body {
   background-color: #6bb196;
 }
 
+/* 6. Form */
+
+.form {
+  margin: 0 auto;
+  padding: 0 0 90px 0;
+  text-align: center;
+}
+
+.form__header img {
+  padding: 105px 0 30px 0;
+}
+
+.form__header h3 {
+  font-size: calc(18px + 6 * ((100vw - 320px) / 1280));
+  padding: 0 0 35px 0;
+  font-style: italic;
+  color: #848789;
+}
+
+.form__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 70px;
+}
+
+.form__body input {
+  font-size: calc(15px + 5 * ((100vw - 320px) / 1280));
+  min-height: 70px;
+  margin: 0 15px 0 0;
+  padding: 0 185px 0 25px;
+  border: 1px solid #d3d7d9;
+  font-style: italic;
+}
+
+.form__body button {
+  font-size: calc(17px + 7 * ((100vw - 320px) / 1280));
+  min-height: 70px;
+  padding: 0 45px;
+  color: #fff;
+  background-color: #64c29e;
+}
+
+.form__menu {
+  margin: 0 auto;
+}
+
 @media (max-width: 1199px) {
   .models .models__row {
     display: block;
@@ -732,6 +784,33 @@ body {
   .shop__footer__btn span {
     padding: 17px 43px;
   }
+
+  .form {
+    padding: 0 0 90px 0;
+  }
+
+  .form__header img {
+    padding: 90px 0 30px 0;
+  }
+
+  .form__header h3 {
+    padding: 0 0 35px 0;
+  }
+
+  .form__body {
+    min-height: 70px;
+  }
+
+  .form__body input {
+    min-height: 70px;
+    margin: 0 15px 0 0;
+    padding: 0 160px 0 25px;
+  }
+
+  .form__body button {
+    min-height: 70px;
+    padding: 0 40px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
@@ -764,6 +843,33 @@ body {
 
   .shop__footer__btn span {
     padding: 15px 40px;
+  }
+
+  .form {
+    padding: 0 0 70px 0;
+  }
+
+  .form__header img {
+    padding: 70px 0 30px 0;
+  }
+
+  .form__header h3 {
+    padding: 0 0 35px 0;
+  }
+
+  .form__body {
+    min-height: 70px;
+  }
+
+  .form__body input {
+    min-height: 50px;
+    margin: 0 15px 0 0;
+    padding: 0 0 0 25px;
+  }
+
+  .form__body button {
+    min-height: 50px;
+    padding: 0 25px;
   }
 }
 

@@ -9,6 +9,7 @@
 /* 3. Bicycle gallery */
 /* 4. Swiper */
 /* 5. Shop */
+/* 6. Form */
 /* -------------------------------------------------------------------- */
 
 /* === Common === */
@@ -798,6 +799,121 @@ body {
                 span {
                     padding: 15px 40px;
                 }
+            }
+        }
+    }
+}
+
+/* 6. Form */
+
+.form {
+    margin: 0 auto;
+    padding: 0 0 90px 0;
+    text-align: center;
+
+    &__header {
+
+        img {
+            padding: 105px 0 30px 0;
+        }
+
+        h3 {
+            @include adaptive-font(24, 18);
+            padding: 0 0 35px 0;
+            font-style: italic;
+            color: #848789;
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        min-height: 70px;
+
+        input {
+            @include adaptive-font(20, 15);
+            min-height: 70px;
+            margin: 0 15px 0 0;
+            padding: 0 185px 0 25px;
+            border: 1px solid #d3d7d9;
+            font-style: italic;
+        }
+    
+        button {
+            @include adaptive-font(24, 17);
+            min-height: 70px;
+            padding: 0 45px;
+            color: #fff;
+            background-color: #64c29e;
+        }
+    }
+
+    &__menu {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .form {
+        padding: 0 0 90px 0;
+    
+        &__header {
+    
+            img {
+                padding: 90px 0 30px 0;
+            }
+    
+            h3 {
+                padding: 0 0 35px 0;
+            }
+        }
+    
+        &__body {
+            min-height: 70px;
+    
+            input {
+                min-height: 70px;
+                margin: 0 15px 0 0;
+                padding: 0 160px 0 25px;
+            }
+        
+            button {
+                min-height: 70px;
+                padding: 0 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+
+    .form {
+        padding: 0 0 70px 0;
+    
+        &__header {
+    
+            img {
+                padding: 70px 0 30px 0;
+            }
+    
+            h3 {
+                padding: 0 0 35px 0;
+            }
+        }
+    
+        &__body {
+            min-height: 70px;
+    
+            input {
+                min-height: 50px;
+                margin: 0 15px 0 0;
+                padding: 0 0 0 25px;
+            }
+        
+            button {
+                min-height: 50px;
+                padding: 0 25px;
             }
         }
     }
