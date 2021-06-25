@@ -10,6 +10,7 @@
 /* 4. Swiper */
 /* 5. Shop */
 /* 6. Form */
+/* 7. Footer */
 /* -------------------------------------------------------------------- */
 
 /* === Common === */
@@ -915,6 +916,82 @@ body {
                 min-height: 50px;
                 padding: 0 25px;
             }
+        }
+    }
+}
+
+/* 7. Footer */
+
+.footer {
+    background-color: #f7f7f7;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__column {
+        width: 21.5%;
+        padding: 100px 0 100px 0;
+
+        &__wrapper {
+            margin: 0 auto;
+        }
+    }
+    
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .first {
+        line-height: 18px;
+        color: #848789;
+
+        h3 {
+            font-weight: bold;
+        }
+    }
+
+    .second {
+
+        img {
+            padding: 0 15px 0 0;
+        }
+    }
+
+    .third {
+        justify-content: flex-end;
+
+        p {
+            @include adaptive-font(14, 12);
+            padding: 0 10px 0 0;
+            font-style: italic;
+            color: #848789;
+        }
+    }
+}
+
+@media (max-width: 765px) {
+
+    .footer {
+
+        .container {
+            display: block;
+        }
+
+        &__column {
+            padding: 50px 0 50px 0;
+            width: 100%;
+        }
+
+        .first {
+            padding: 75px 0 50px 0;
+            text-align: center;
+        }
+
+        .third {
+            justify-content: center;
         }
     }
 }

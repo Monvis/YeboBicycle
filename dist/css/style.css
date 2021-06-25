@@ -106,6 +106,8 @@ h6 {
 
 /* 6. Form */
 
+/* 7. Footer */
+
 /* -------------------------------------------------------------------- */
 
 /* === Common === */
@@ -690,6 +692,65 @@ body {
   margin: 0 auto;
 }
 
+/* 7. Footer */
+
+.footer {
+  background-color: #f7f7f7;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__column {
+  width: 21.5%;
+  padding: 100px 0 100px 0;
+}
+
+.footer__column__wrapper {
+  margin: 0 auto;
+}
+
+.footer .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .first {
+  line-height: 18px;
+  color: #848789;
+}
+
+.footer .first h3 {
+  font-weight: bold;
+}
+
+.footer .second img {
+  padding: 0 15px 0 0;
+}
+
+.footer .third {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer .third p {
+  font-size: calc(12px + 2 * ((100vw - 320px) / 1280));
+  padding: 0 10px 0 0;
+  font-style: italic;
+  color: #848789;
+}
+
 @media (max-width: 1199px) {
   .models .models__row {
     display: block;
@@ -713,6 +774,28 @@ body {
 
   .shop__body {
     display: block;
+  }
+}
+
+@media (max-width: 765px) {
+  .footer .container {
+    display: block;
+  }
+
+  .footer__column {
+    padding: 50px 0 50px 0;
+    width: 100%;
+  }
+
+  .footer .first {
+    padding: 75px 0 50px 0;
+    text-align: center;
+  }
+
+  .footer .third {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
