@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>YeboBicycle</title>
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link href="css/style.min.css" rel="stylesheet" type="text/css"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
@@ -162,46 +161,43 @@
 
 		<!-- Swiper -->
 
-		<div class="slider-container">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-				  	<div class="swiper-slide">
-					  	<div class="swiper-slide-item">
-						  	<div class="swiper-slide-item-title">
-								<img src="img/twitter-slider.png" alt="">
-								<h2>AOD New York  @aod  <span>/  35 min</span></h2>
-						  	</div>
-						 	 <div class="swiper-slide-item-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
-						  	</div>
-					  	</div>
-				  	</div>
-				  	<div class="swiper-slide">
-						<div class="swiper-slide-item">
-							<div class="swiper-slide-item-title">
-							  <img src="img/facebook.png" alt="">
-							  <h2>AOD Australia  @aod  <span>/  1 hour</span></h2>
-							</div>
-							<div class="swiper-slide-item-text">
-							  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
-							</div>
+		<div class="slider">
+			<div class="container">
+				<div class="slider__wrapper">
+					<div class="slide">
+						<div class="slide__img">
+							<img src="img/twitter-slider.png" alt="">
 						</div>
-					  </div>
-				  	<div class="swiper-slide">
-						<div class="swiper-slide-item">
-							<div class="swiper-slide-item-title">
-							  <img src="img/pinterest.png" alt="">
-							  <h2>AOD London  @aod  <span>/  3 hours</span></h2>
-							</div>
-							<div class="swiper-slide-item-text">
-							  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
-							</div>
+						<div class="slide__title">
+							<h3>AOD New York  @aod <span> /  35 min</span></h3>
 						</div>
-					  </div>
+						<div class="slide__info">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide__img">
+							<img src="img/facebook.png" alt="">
+						</div>
+						<div class="slide__title">
+							<h3>AOD London  @aod <span> /  1 hour</span></h3>
+						</div>
+						<div class="slide__info">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide__img">
+							<img src="img/pinterest.png" alt="">
+						</div>
+						<div class="slide__title">
+							<h3>AOD Paris  @aod <span> /  6 hours</span></h3>
+						</div>
+						<div class="slide__info">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</p>
+						</div>
+					</div>
 				</div>
-
-				<div class="swiper-pagination"></div>
-
 			</div>
 		</div>
 
@@ -328,8 +324,8 @@
 			</div>
 		</div>
 	</footer>
-
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/slick/slick.min.js"></script>
 	<script src='source/js/script.js'></script>
 </body>
 

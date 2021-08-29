@@ -512,119 +512,104 @@ body {
     }
 }
 
-/* 3. Swiper */
+/* 4. Slick slider */
 
-.slider-container {
+.slider {
     background-color: #f7f7f7;
+}
+
+.slide {
     text-align: center;
+    padding: 0 20px;
+
+    &__img {
+        margin: 50px 0 35px 0;
+    }
+
+    &__title {
+        @include adaptive-font(18, 13);
+        margin: 0 0 30px 0;
+        letter-spacing: 1px;
+        font-weight: bold;
+
+        span {
+            margin: 0 0 0 5px;
+            color: #939698;
+            font-weight: lighter;
+        }
+    }
+
+    &__info {
+        @include adaptive-font(24, 18);
+        line-height: 34px;
+        font-style: italic;
+        color: #848789;
+    }
+}
+
+.slick-slider.slick-initialized {
+    position: relative;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-arrow {
+    font-size: 0;
+}
+
+.slick-track {
+    display: flex;
+    padding: 0;
+}
+
+.slick-active {
+
+    button {
+        background-color: #a9afb3;
+    }
+}
+
+.slick-dots {
+    margin: 40px 0 0 0;
     padding: 0 0 65px 0;
-
-    .swiper-container {
-        width: 80%;
-        min-height: 200px;
-        max-height: 400px;
-
-        .swiper-wrapper {
-
-            .swiper-slide {
-
-                &-item {
-
-                    &-title {
-                        font-weight: bold;
-                        @include adaptive-font(18, 15);
-                        letter-spacing: 2px;
-
-                        img {
-                            padding: 120px 0 30px 0;
-                        }
-
-                        span {
-                            font-weight: normal;
-                            color: #848789;
-                        }
-                    }
-
-                    &-text {
-                        padding: 30px 15px 100px;
-                        font-style: italic;
-                        font-size: 24px;
-                        color: #848789;
-                        line-height: 34px;
-                    }
-                }
-            }
-        }
-
-        /* Цвет активной иконки слайдера */
-
-        .swiper-pagination-bullet-active {
-            background-color: #848789;
-        }
-    }
+    display: flex;
+    justify-content: center;
 }
 
-@media (min-width: 320px) and (max-width: 626px) {
-
-    .slider-container {
-        padding: 0 0 60px;
-
-        .swiper-container {
-
-            .swiper-wrapper {
-
-                .swiper-slide {
-
-                    &-item {
-
-                        &-title {
-
-                            img {
-                                padding: 60px 0 30px 0;
-                            }
-                        }
-
-                        &-text {
-                            @include adaptive-font(20, 17);
-                            line-height: 24px;
-                            text-align: justify;
-                            padding: 30px 15px 70px;
-                        }
-                    }
-                }
-            }
-        }
-    }
+#slick-slide-control00 {
+    margin: 0 9px 0 0;
+    font-size: 0;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid #cdcdcd;
 }
 
-@media (min-width: 626px) and (max-width: 684px) {
+#slick-slide-control01 {
+    margin: 0 9px 0 0;
+    font-size: 0;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid #cdcdcd;
+}
 
-    .slider-container {
+#slick-slide-control02 {
+    font-size: 0;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid #cdcdcd;
+}
 
-        .swiper-container {
+@media (max-width: 768px) {
+    
+    .slide {
 
-            .swiper-wrapper {
-
-                .swiper-slide {
-
-                    &-item {
-
-                        &-title {
-
-                            img {
-                                padding: 60px 0 30px 0;
-                            }
-                        }
-
-                        &-text {
-                            @include adaptive-font(19, 18);
-                            line-height: 24px;
-                            text-align: center;
-                            padding: 30px 15px 70px;
-                        }
-                    }
-                }
-            }
+        &__info {
+            text-align: justify;
         }
     }
 }
@@ -638,7 +623,7 @@ body {
     }
 
     &__column {
-        flex: 0 1 33.3333%;;
+        flex: 0 1 33.3333%;
 
         .img__card {
             width: 100%;
